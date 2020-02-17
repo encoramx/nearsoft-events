@@ -2,197 +2,91 @@
 layout: home
 ---
 
-<div class="container">
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-7 offset-md-4">
-          <h3 class="orange">Nearsoft Hermosillo</h3>
-        </div>
-      </div>
-      {% for event in site.data.hmo.events %}
-      <div class="row justify-content-center mb-5">
-        <div class="col-6 col-lg-3">
-          {% if event.link != null %}
-          <a href="{{ event.link }}">
-            {% endif %}
-            {% if event.img != null %}
-            <img src="{{ event.img }}" alt="" class="img-fluid rounded shadow">
-            {% else %}
-            <img src="/img/default.png" alt="" class="img-fluid rounded shadow">
-            {% endif %}
-            {% if event.link != null %}
-          </a>
-          {% endif %}
-        </div>
-        <div class="col-12 col-md-7">
-          <p class="gray mb-0">{{ event.date }}</p>
-          <h2 class="mt-0">{{ event.title }}</h2>
-          <p class="">
-            {{ event.desc }}
-          </p>
-          {% if event.link != null %}
-          <p><a href="{{ event.link }}" class="link-arrow">More information</a></p>
-          {% endif %}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </section>
-</div>
+<section class="px-3 pt-3">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
 
-<div class="container">
-  <section class="border-top border-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-7 offset-md-4">
-          <h3 class="orange">Nearsoft Chihuahua</h3>
-        </div>
-      </div>
-      {% for event in site.data.cuu.events %}
-      <div class="row justify-content-center mb-5">
-        <div class="col-6 col-lg-3">
-          {% if event.link != null %}
-          <a href="{{ event.link }}">
-            {% endif %}
-            {% if event.img != null %}
-            <img src="{{ event.img }}" alt="" class="img-fluid rounded shadow">
-            {% else %}
-            <img src="/img/default.png" alt="" class="img-fluid rounded shadow">
-            {% endif %}
-            {% if event.link != null %}
-          </a>
-          {% endif %}
-        </div>
-        <div class="col-12 col-md-7">
-          <p class="gray mb-0">{{ event.date }}</p>
-          <h2 class="mt-0">{{ event.title }}</h2>
-          <p class="">
-            {{ event.desc }}
-          </p>
-          {% if event.link != null %}
-          <p><a href="{{ event.link }}" class="link-arrow">More information</a></p>
-          {% endif %}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </section>
-</div>
+        {% for entry in site.data.events %}
+        <h2 id="{{ entry.months | downcase}}" class="orange h1 pt-5">{{ entry.months }}</h2>
+        {% for event in entry.events %}
+        <div
+          class="row p-4 bg-white shadow rounded mb-3 event {{ event.type}} {{ event.offices | replace: ' ', '' | replace: ',', ' ' | downcase }}">
+          <div class="col-12">
+            <h2 class="m-0">{{ event.title }}</h2>
+            <p class="gray">{{ event.date }}</p>
+            <p class="offices">
+              {% assign offices = event.offices | split: ", " %}
+              {% for office in offices %}
+              <small class="d-inline-block mr-2"><i class="fa fa-map-marker-alt orange"></i>
+                <strong>{{ office }}</strong></small>
+              {% endfor %}
 
-<div class="container">
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-7 offset-md-4">
-          <h3 class="orange">Nearsoft Mexico City</h3>
+              {% assign types = event.type %}
+              {% for type in types %}
+              {% if type == "meetup" %}
+              {% assign icon = "handshake" %}
+              {% elsif type == "training" %}
+              {% assign icon = "laptop-code" %}
+              {% elsif type == "special" %}
+              {% assign icon = "star" %}
+              {% endif %}
+              <strong class="gray">&middot;</strong>
+              <small class="d-inline-block ml-2"><i class="fa fa-{{ icon }} orange"></i>
+                <strong>{{ type | capitalize }}</strong></small>
+              {% endfor %}
+            </p>
+          </div>
         </div>
-      </div>
-      {% for event in site.data.cdmx.events %}
-      <div class="row justify-content-center mb-5">
-        <div class="col-6 col-lg-3">
-          {% if event.link != null %}
-          <a href="{{ event.link }}">
-            {% endif %}
-            {% if event.img != null %}
-            <img src="{{ event.img }}" alt="" class="img-fluid rounded shadow">
-            {% else %}
-            <img src="/img/default.png" alt="" class="img-fluid rounded shadow">
-            {% endif %}
-            {% if event.link != null %}
-          </a>
-          {% endif %}
-        </div>
-        <div class="col-12 col-md-7">
-          <p class="gray mb-0">{{ event.date }}</p>
-          <h2 class="mt-0">{{ event.title }}</h2>
-          <p class="">
-            {{ event.desc }}
-          </p>
-          {% if event.link != null %}
-          <p><a href="{{ event.link }}" class="link-arrow">More information</a></p>
-          {% endif %}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </section>
-</div>
+        {% endfor %}
+        {% endfor %}
 
-<div class="container">
-  <section class="border-top border-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-7 offset-md-4">
-          <h3 class="orange">Nearsoft San Luis Potosi</h3>
-        </div>
-      </div>
-      {% for event in site.data.slp.events %}
-      <div class="row justify-content-center mb-5">
-        <div class="col-6 col-lg-3">
-          {% if event.link != null %}
-          <a href="{{ event.link }}">
-            {% endif %}
-            {% if event.img != null %}
-            <img src="{{ event.img }}" alt="" class="img-fluid rounded shadow">
-            {% else %}
-            <img src="/img/default.png" alt="" class="img-fluid rounded shadow">
-            {% endif %}
-            {% if event.link != null %}
-          </a>
-          {% endif %}
-        </div>
-        <div class="col-12 col-md-7">
-          <p class="gray mb-0">{{ event.date }}</p>
-          <h2 class="mt-0">{{ event.title }}</h2>
-          <p class="">
-            {{ event.desc }}
-          </p>
-          {% if event.link != null %}
-          <p><a href="{{ event.link }}" class="link-arrow">More information</a></p>
-          {% endif %}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </section>
-</div>
 
-<div class="container">
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-7 offset-md-4">
-          <h3 class="orange">Nearsoft Merida</h3>
-        </div>
+
       </div>
-      {% for event in site.data.mid.events %}
-      <div class="row justify-content-center mb-5">
-        <div class="col-6 col-lg-3">
-          {% if event.link != null %}
-          <a href="{{ event.link }}">
-            {% endif %}
-            {% if event.img != null %}
-            <img src="{{ event.img }}" alt="" class="img-fluid rounded shadow">
-            {% else %}
-            <img src="/img/default.png" alt="" class="img-fluid rounded shadow">
-            {% endif %}
-            {% if event.link != null %}
-          </a>
-          {% endif %}
-        </div>
-        <div class="col-12 col-md-7">
-          <p class="gray mb-0">{{ event.date }}</p>
-          <h2 class="mt-0">{{ event.title }}</h2>
-          <p class="">
-            {{ event.desc }}
+      <div class="col-lg-3 offset-lg-1 pt-5 mt-5">
+        <div class="mt-3">
+          <p class="lead">
+            You can find more information about these events at least a week in advance at Nearsoft Jobs:
           </p>
-          {% if event.link != null %}
-          <p><a href="{{ event.link }}" class="link-arrow">More information</a></p>
-          {% endif %}
+          <p class="">
+            <a href="https:///nearsoftjobs" class="h2 mr-2"><i class="fab fa-facebook"></i></a>
+            <a href="https:///nearsoftjobs" class="h2 mr-2"><i class="fab fa-twitter"></i></a>
+            <a href="https:///nearsoftjobs" class="h2 mr-2"><i class="fab fa-instagram"></i></a>
+          </p>
+
+          <h4 class="mt-5">Jump to a Month:</h4>
+          <ul class="list-unstyled">
+            {% for entry in site.data.events %}
+            <li class="mb-1"><a href="#{{ entry.months | downcase }}">
+                {{ entry.months }}</a></li>
+            {% endfor %}
+          </ul>
+
+
+          <h4 class="mt-5">Filter by city:</h4>
+          <ul class="list-unstyled">
+            <li class="mb-1"><a href="all" class="filter">All</a></li>
+            <li class="mb-1"><a href="hermosillo" class="filter">Hermosillo</a></li>
+            <li class="mb-1"><a href="mexicocity" class="filter">Mexico City</a></li>
+            <li class="mb-1"><a href="chihuahua" class="filter">Chihuahua</a></li>
+            <li class="mb-1"><a href="sanluispotosi" class="filter">San Luis Potosi</a></li>
+            <li class="mb-1"><a href="merida" class="filter">Merida</a></li>
+          </ul>
+
+          <h4 class="mt-5">Filter by type of event:</h4>
+          <ul class="list-unstyled">
+            <li class="mb-1"><a href="all" class="filter">All</a></li>
+            <li class="mb-1"><a href="training" class="filter">Training</a></li>
+            <li class="mb-1"><a href="meetup" class="filter">Meetup</a></li>
+            <li class="mb-1"><a href="special" class="filter">Special</a></li>
+          </ul>
         </div>
       </div>
-      {% endfor %}
     </div>
-  </section>
-</div>
+  </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>

@@ -1,0 +1,199 @@
+- months: February
+  events:
+    - title: Student of Excellence — Registrations
+      date: February 17th, 2020
+      offices: Hermosillo, Chihuahua
+      type:
+
+    - title: Google Developer Group Meetup
+      date: February 27th, 2020
+      offices: Hermosillo
+      type: meetup
+
+- months: March
+  events:
+    - title: Desarrollador San Luis Potosi
+      date: March 3rd, 2020
+      offices: San Luis Potosi
+      type: meetup
+
+    - title: Student of Excellence — Stage 1
+      date: March 9th, 2020
+      offices: Hermosillo, Chihuahua
+      type:
+
+    - title: Student of Excellence — Stage 2
+      date: March 16th, 2020
+      offices: Hermosillo, Chihuahua
+      type:
+
+    - title: Student of Excellence — Stage 3
+      date: March 26th, 2020
+      offices: Hermosillo, Chihuahua
+      type:
+
+- months: April
+  events:
+    - title: Student of Excellence — Stage 4
+      date: April 26th, 2020
+      offices: Hermosillo, Chihuahua
+      type:
+
+    - title: Google Developer Group Meetup
+      date: April 4th, 2020
+      offices: Hermosillo
+      type: meetup
+
+    - title: Desarrollador San Luis Potosi
+      date: April 7th, 2020
+      offices: San Luis Potosi
+      type: meetup
+
+    - title: Student of Excellence — Awards Ceremony
+      date: April 10th, 2020
+      offices: Hermosillo, Chihuahua
+      type:
+
+    - title: QA Sessions — Registrations
+      date: April 20th, 2020
+      offices: Hermosillo, Chihuahua
+      type: training
+
+- months: May
+  events:
+    - title: Desarrollador San Luis Potosi
+      date: May 5th, 2020
+      offices: San Luis Potosi
+      type: meetup
+
+    - title: Nearsoft Con
+      date: May 20th, 2020
+      offices: Chihuahua
+      type: special
+
+    - title: Java School
+      date: May 30th, 2020
+      offices: San Luis Potosi
+      type: training
+
+- months: June
+  events:
+    - title: Desarrollador San Luis Potosi
+      date: June 9th, 2020
+      offices: San Luis Potosi
+      type: meetup
+
+    - title: Google Developer Group Meetup
+      date: June 11th, 2020
+      offices: Hermosillo
+      type: meetup
+
+    - title: JavaScript School — Registrations
+      date: June 15th, 2020
+      offices: Hermosillo
+      type: training
+
+    - title: QA Sessions Begin
+      date: June 15th, 2020
+      offices: Hermosillo, Chihuahua
+      type: training
+
+    - title: iOS School — Registrations
+      date: June 29th, 2020
+      offices: San Luis Potosi
+      type: training
+
+- months: July
+  events:
+    - title: JavaScript School Begins
+      date: July 4th, 2020
+      offices: Hermosillo
+      type: training
+
+    - title: Desarrollador San Luis Potosi
+      date: July 7th, 2020
+      offices: San Luis Potosi
+      type: meetup
+
+    - title: Google Developer Group Meetup
+      date: July 18th, 2020
+      offices: Hermosillo
+      type: meetup
+
+    - title: Django Girls
+      date: July 25th, 2020
+      offices: Mexico City
+      type: training
+
+    - title: Java School — Registrations
+      date: July 25th, 2020
+      offices: Hermosillo
+      type: training
+
+    - title: iOS School
+      date: July 25th, 2020
+      offices: San Luis Potosi
+      type: training
+
+- months: August
+  events:
+    - title: Desarrollador San Luis Potosi
+      date: August 4th, 2020
+      offices: San Luis Potosi
+      type: meetup
+
+    - title: Housewarming Event
+      date: August 13th, 2020
+      offices: mid
+      type: special
+
+    - title: Java School Begins
+      date: August 13th, 2020
+      offices: Hermosillo
+      type: training
+
+    - title: Java School — Registrations
+      date: August 13th, 2020
+      offices: Chihuahua
+      type: training
+
+- months: September
+  events:
+    - title: Desarrollador San Luis Potosi
+      date: September 1st, 2020
+      offices: San Luis Potosi
+      type: meetup
+
+    - title: Nearsoft Con
+      date: September 26th, 2020
+      offices: Hermosillo
+      type: special
+
+    - title: Java School Begins
+      date: September 26th, 2020
+      offices: Chihuahua
+      type: training
+
+- months: October
+  events:
+    - title: Desarrollador San Luis Potosi
+      date: October 6th, 2020
+      offices: San Luis Potosi
+      type: meetup
+
+    - title: Google Developer Group DevFest
+      date: October 31st, 2020
+      offices: Hermosillo
+      type: special
+
+- months: November
+  events:
+    - title: Desarrollador San Luis Potosi
+      date: November 3rd, 2020
+      offices: San Luis Potosi
+      type: meetup
+
+    - title: Nearsoft Con
+      date: November 14th, 2020
+      offices: San Luis Potosi
+      type: special

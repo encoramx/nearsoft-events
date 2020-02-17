@@ -1,0 +1,38 @@
+@import "https://use.fontawesome.com/releases/v5.7.2/css/all.css";
+.hero {
+  background-image: url(/img/mike.jpg);
+  background-position: center right;
+  background-size: cover;
+}
+
+body.hermosillo .event:not(.hermosillo) {
+  display: none;
+}
+
+body.mexicocity .event:not(.mexicocity) {
+  display: none;
+}
+
+body.chihuahua .event:not(.chihuahua) {
+  display: none;
+}
+
+body.sanluispotosi .event:not(.sanluispotosi) {
+  display: none;
+}
+
+body.merida .event:not(.merida) {
+  display: none;
+}
+
+body.training .event:not(.training) {
+  display: none;
+}
+
+body.meetup .event:not(.meetup) {
+  display: none;
+}
+
+body.special .event:not(.special) {
+  display: none;
+}
