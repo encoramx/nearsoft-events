@@ -6,14 +6,25 @@ layout: home
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-7">
-
+        <p class="h1 filtered pt-5 orange">Events
+          <span class="city">at</span>
+          <span class="hermosillo">Hermosillo</span><span class="d-none">,</span>
+          <span class="mexicocity">Mexico City</span><span class="d-none">,</span>
+          <span class="chihuahua">Chihuahua</span><span class="d-none">,</span>
+          <span class="sanluispotosi">San Luis Potosi</span><span class="d-none"> and</span>
+          <span class="merida">Merida</span><span class="d-none">,</span>
+          <span class="type">tagged as</span>
+          <span class="meetup">Meetup</span><span class="d-none">,</span>
+          <span class="training">Training</span><span class="d-none"> and</span>
+          <span class="special">Special</span><span class="d-none">.</span>
+        </p>
         {% for entry in site.data.events %}
         <h2 id="{{ entry.months | downcase}}" class="orange h1 pt-5">{{ entry.months }}</h2>
         {% for event in entry.events %}
         <div
           class="row p-4 bg-white shadow rounded mb-3 event {{ event.type}} {{ event.offices | replace: ' ', '' | replace: ',', ' ' | downcase }}">
           <div class="col-12">
-            <h2 class="m-0">{{ event.title }}</h2>
+            <h3 class="h2 m-0">{{ event.title }}</h3>
             <p class="gray">{{ event.date }}</p>
             <p class="offices">
               {% assign offices = event.offices | split: ", " %}
@@ -66,20 +77,20 @@ layout: home
 
           <h4 class="mt-5">Filter by city:</h4>
           <ul class="list-unstyled">
-            <li class="mb-1"><a href="all" class="filter">All</a></li>
-            <li class="mb-1"><a href="hermosillo" class="filter">Hermosillo</a></li>
-            <li class="mb-1"><a href="mexicocity" class="filter">Mexico City</a></li>
-            <li class="mb-1"><a href="chihuahua" class="filter">Chihuahua</a></li>
-            <li class="mb-1"><a href="sanluispotosi" class="filter">San Luis Potosi</a></li>
-            <li class="mb-1"><a href="merida" class="filter">Merida</a></li>
+            <li class="mb-1"><a href="all" class="filter city">All</a></li>
+            <li class="mb-1"><a href="hermosillo" class="filter city">Hermosillo</a></li>
+            <li class="mb-1"><a href="mexicocity" class="filter city">Mexico City</a></li>
+            <li class="mb-1"><a href="chihuahua" class="filter city">Chihuahua</a></li>
+            <li class="mb-1"><a href="sanluispotosi" class="filter city">San Luis Potosi</a></li>
+            <li class="mb-1"><a href="merida" class="filter city">Merida</a></li>
           </ul>
 
           <h4 class="mt-5">Filter by type of event:</h4>
           <ul class="list-unstyled">
-            <li class="mb-1"><a href="all" class="filter">All</a></li>
-            <li class="mb-1"><a href="training" class="filter">Training</a></li>
-            <li class="mb-1"><a href="meetup" class="filter">Meetup</a></li>
-            <li class="mb-1"><a href="special" class="filter">Special</a></li>
+            <li class="mb-1"><a href="all" class="filter type">All</a></li>
+            <li class="mb-1"><a href="training" class="filter type">Training</a></li>
+            <li class="mb-1"><a href="meetup" class="filter type">Meetup</a></li>
+            <li class="mb-1"><a href="special" class="filter type">Special</a></li>
           </ul>
         </div>
       </div>

@@ -1,11 +1,15 @@
 @import "https://use.fontawesome.com/releases/v5.7.2/css/all.css";
+html {
+  scroll-behavior: smooth;
+}
+
 .hero {
   background-image: url(/img/mike.jpg);
   background-position: center right;
   background-size: cover;
 }
 
-body.hermosillo .event:not(.hermosillo) {
+body.hermosillo .event:not(.hermosillo), {
   display: none;
 }
 
@@ -35,4 +39,24 @@ body.meetup .event:not(.meetup) {
 
 body.special .event:not(.special) {
   display: none;
+}
+
+body.show-city h2, body.show-type h2 {
+  display: none;
+}
+
+.filtered, .filtered span {
+  display: none;
+}
+
+.show-city .filtered, .show-type .filtered {
+  display: block;
+}
+
+.show-city .filtered .city, body.hermosillo .filtered .hermosillo, body.mexicocity .filtered .mexicocity, body.chihuahua .filtered .chihuahua, body.sanluispotosi .filtered .sanluispotosi, body.merida .filtered .merida {
+  display: inline;
+}
+
+.show-type .filtered .type, body.meetup .filtered .meetup, body.training .filtered .training, body.special .filtered .chihuahua {
+  display: inline;
 }
