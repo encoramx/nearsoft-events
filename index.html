@@ -26,7 +26,7 @@ layout: home
           <div class="col-12">
             <h3 class="h2 m-0">{{ event.title }}</h3>
             <p class="gray">{{ event.date }}</p>
-            <p class="offices">
+            <p class="offices mb-0">
               {% assign offices = event.offices | split: ", " %}
               {% for office in offices %}
               <small class="d-inline-block mr-2"><i class="fa fa-map-marker-alt orange"></i>
