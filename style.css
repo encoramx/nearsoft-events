@@ -57,6 +57,6 @@ body.show-city h2, body.show-type h2 {
   display: inline;
 }
 
-.show-type .filtered .type, body.meetup .filtered .meetup, body.training .filtered .training, body.special .filtered .chihuahua {
+.show-type .filtered .type, body.meetup .filtered .meetup, body.training .filtered .training, body.special .filtered .special {
   display: inline;
 }
